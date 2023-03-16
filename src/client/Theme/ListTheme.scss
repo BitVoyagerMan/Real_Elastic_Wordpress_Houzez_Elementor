@@ -1,0 +1,8 @@
+/* Here import all the common style which needs to be send via theme prop */
+.heading {
+  margin: 0 !important;
+  font-weight: 600 !important;
+  line-height: 36px;
+  border-bottom: solid 1px rgba(175, 175, 175, 0.34);
+  padding-bottom: 18px;
+}

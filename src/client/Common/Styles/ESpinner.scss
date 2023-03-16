@@ -1,0 +1,28 @@
+.eSpinnerContainer {
+  position: absolute;
+  left: 53%;
+  top: 53%;
+  z-index: 10000;
+  transform: translate(-53%, -53%);
+
+  .spinnerText {
+    position: absolute;
+    left: 55%;
+    transform: translate(-50%, 45px);
+    width: 100px;
+    text-align: center;
+  }
+}
+
+.eSpinner {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  animation: spin 1.3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

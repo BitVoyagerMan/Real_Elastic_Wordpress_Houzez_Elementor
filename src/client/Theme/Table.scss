@@ -1,0 +1,89 @@
+@import './Heading';
+
+$table-head-vertical-spacing: spacing(tight) * 1.5;
+$table-vertical-spacing: spacing(base);
+$table-horizontal-spacing: spacing(tight);
+
+.table {
+  margin-top: 12px;
+  table-layout: auto;//fixed;
+
+  thead {
+    border-bottom: none;
+  }
+
+  th {
+    @include text-style-body-small;
+    color: theme-color(m-grey, 700);
+    font-weight: 600;
+    padding: $table-head-vertical-spacing $table-horizontal-spacing;
+    background-color: color(sky, light);
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: $table-vertical-spacing $table-horizontal-spacing;
+
+    &:first-child {
+      div {
+        justify-content: flex-end;
+      }
+    }
+
+    &:last-child:not([colspan]) {
+      text-align: right;
+    }
+  }
+}
+
+.bordered {
+  > thead > tr, > tbody > tr {
+    border-bottom: 1px solid theme-color(m-blue-grey, 50);
+  }
+}
+
+.highlight {
+  > tbody > tr:hover {
+    background-color: color(sky, lighter);
+  }
+}
+
+.sortingHeader {
+  align-items: center;
+}
+
+.sortIcon {
+  .iconGroupStyle {
+    width: 13px;
+    height: 13px;
+
+    &:last-child {
+      margin-top: -9px;
+    }
+  }
+}
+
+.customControl {
+  line-height: 0;
+}
+
+.customControlLabel {
+  &:before, &:after {
+    position: unset;
+  }
+}
+
+.button {
+  padding: 0 5px;
+
+  &:active {
+    border: 1px solid #CCCCCC;
+  }
+}
+
+.card {
+  margin-top: 20px;
+  padding: 16px;
+  box-shadow: none;
+  border-radius: 8px;
+}
